@@ -38,7 +38,14 @@ jobs:
       - name: Set image tag
         shell: cmd
         run: echo tag=%GITHUB_SHA%>> %GITHUB_OUTPUT%
-        
+
+      - name: Docker login to Harbor
+        shell: cmd
+        run: echo %DOCKER_PASSWORD% | docker login 210.90.24.172:8080 -u %DOCKER_USERNAME% --password-stdin
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}  
+
       - name: Log in to Harbor
         uses: docker/login-action@v3
         with:
