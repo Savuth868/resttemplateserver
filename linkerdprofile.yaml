@@ -1,0 +1,17 @@
+apiVersion: linkerd.io/v1alpha2
+kind: ServiceProfile
+metadata:
+  name: resttemplateserver.default.svc.cluster.local
+  namespace: default
+spec:
+  routes:
+  - name: GET /books
+    condition:
+      method: GET
+      pathRegex: /books
+    isRetryable: true
+    timeout: 1s
+  retryBudget:
+    retryRatio: 0.2
+    minRetriesPerSecond: 10
+    ttl: 10s
