@@ -21,7 +21,7 @@ spec:
             - containerPort: 3306
           env:
             - name: MYSQL_ROOT_PASSWORD
-              value: root1234
+              value: 123456
             - name: MYSQL_DATABASE
               value: bookdb
           volumeMounts:
