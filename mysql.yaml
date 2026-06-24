@@ -21,7 +21,7 @@ spec:
             - containerPort: 3306
           env:
             - name: MYSQL_ROOT_PASSWORD
-              value: root1234
+              value: root123456
             - name: MYSQL_ROOT_HOST
               value: "%"
             - name: MYSQL_DATABASE
@@ -47,4 +47,4 @@ spec:
     - name: mysql
       port: 3306
       targetPort: 3306
-      nodePort: 30100
+      nodePort: 30102
