@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: resttemplateserver
-          image: yklee2002/resttemplateserver:latest
+          image: savuth868/resttemplateserver:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -27,7 +27,7 @@ spec:
             - name: SPRING_DATASOURCE_USERNAME
               value: root
             - name: SPRING_DATASOURCE_PASSWORD
-              value: root1234
+              value: root123456
 
             # OpenTelemetry Java Agent
             - name: JAVA_TOOL_OPTIONS
