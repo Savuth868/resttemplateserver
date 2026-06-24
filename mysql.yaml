@@ -51,4 +51,4 @@ spec:
     - name: mysql
       port: 8080
       targetPort: 8080
-      nodePort: 30103
+      nodePort: 30102
