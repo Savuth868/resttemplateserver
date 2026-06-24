@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: resttemplateserver
-          image: 210.90.24.172:8080/restproject/leeyoungkon/resttemplateserver:90eb31a250a75095d133e531c2698890c6cfa704
+          image: savuth868/resttemplateserver
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -28,7 +28,7 @@ spec:
             - name: SPRING_DATASOURCE_USERNAME
               value: root
             - name: SPRING_DATASOURCE_PASSWORD    
-              value: 123456
+              value: root1234
           
 ---
 apiVersion: v1
