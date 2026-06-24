@@ -18,10 +18,17 @@ spec:
     spec:
       containers:
         - name: resttemplateserver
-          image: savuth868/resttemplateserver
+          image: savuth868/resttemplateserver:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:mysql://mysql:3306/bookdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul&characterEncoding=UTF-8"
@@ -40,7 +47,8 @@ spec:
   selector:
     app: resttemplateserver
   ports:
-    - port: 8080
+    - name: http
+      port: 8080
       targetPort: 8080
       nodePort: 30102
 
