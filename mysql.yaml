@@ -26,6 +26,10 @@ spec:
               value: "%"
             - name: MYSQL_DATABASE
               value: bookdb
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PASSWORD
+              value: "123456"
           volumeMounts:
             - name: mysql-data
               mountPath: /var/lib/mysql
