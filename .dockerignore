@@ -1,0 +1,94 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Version control
+.github/
+.gitlab/
+.svn/
+
+# Build artifacts
+target/
+build/
+dist/
+out/
+*.class
+*.jar
+*.war
+
+# IDE and editor files
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Maven
+.mvn/wrapper/download/
+.mvn/wrapper/maven-wrapper.jar.sha1
+
+# Gradle
+.gradle/
+gradle/wrapper/*.jar
+
+# Node (if applicable)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Test files and coverage
+src/test/
+.coverage/
+coverage/
+*.lcov
+test-output/
+
+# Docker files (no need to copy into image)
+docker-compose.yml
+docker-compose.override.yml
+Dockerfile
+
+# Kubernetes files (not needed for runtime)
+k8s*.yaml
+*.yaml
+kustomization.yaml
+
+# Documentation
+*.md
+README*
+CHANGELOG*
+docs/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# CI/CD
+.gitlab-ci.yml
+.travis.yml
+azure-pipelines.yml
+Jenkinsfile
+
+# OS files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Development files
+node_modules/
+.npm/
+.yarn/
+yarn-error.log
+npm-debug.log
+
+# Telemetry and tracing (dev only)
+telemetry.yaml
+tracing.yaml
